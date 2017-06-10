@@ -1,4 +1,15 @@
-# wtf-is-the-internet
+## Purpose
+
+This project aims to serve as a guide to the sometimes confusing terminology of
+the Internet.
+
+## Topics
+
+[*coming soon*]
+
+## Contributing
+
+Anyone is welcome to submit a Pull Request with new information or updates.
 
 ## License
 

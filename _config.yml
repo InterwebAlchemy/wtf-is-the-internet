@@ -1,2 +1,5 @@
 theme: jekyll-theme-minimal
 show_downloads: false
+gems:
+  - jekyll-seo-tag
+  - jekyll-sitemap
