@@ -1,4 +1,5 @@
 theme: jekyll-theme-minimal
+title: WTF is the Internet?
 show_downloads: false
 gems:
   - jekyll-seo-tag

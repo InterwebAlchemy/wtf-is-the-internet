@@ -9,48 +9,62 @@
     <meta name="viewport" content="width=device-width">
   </head>
   <body>
-    <main class="wrapper">
-      <header>
-        <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
+    <section class="wrapper">
+      <aside class="sidebar">
+        <header class="sidebar-header">
+          <h1 class="sidebar-header-title">{{ site.title | default: site.github.repository_name }}</h1>
+          <p class="sidebar-header-subtitle">{{ site.description | default: site.github.project_tagline }}</p>
 
-        {% if site.show_downloads %}
+          {% if site.show_downloads %}
 
-          <ul>
-            <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
-            <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
-            <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
+            <ul>
+              <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
+              <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
+              <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
+            </ul>
+
+          {% endif %}
+
+        </header>
+        <nav class="topic-list-container">
+
+          <h3 class="topic-list-heading">Learn About</h3>
+
+          <ul class="topic-list">
+            <li class="topic-list-item">
+              <a class="topic-list-item-link" href="/privacy/"><span class="ada-hidden">Learn more about </span>Privacy</a>
+            </li>
+            <li class="topic-list-item">
+              <a class="topic-list-item-link" href="/security/"><span class="ada-hidden">Learn more about </span>Security</a>
+            </li>
+            <li class="topic-list-item">
+              <a class="topic-list-item-link" href="/culture/"><span class="ada-hidden">Learn more about </span>Culture</a>
+            </li>
+            <li class="topic-list-item">
+              <a class="topic-list-item-link" href="/miscellany/"><span class="ada-hidden">Learn more about </span>Miscellany</a>
+            </li>
           </ul>
 
-        {% endif %}
+        </nav>
+        <footer class="sidebar-footer">
 
-        <ul>
-          <li>
-            <a href="/privacy/">Privacy</a>
-          </li>
-          <li>
-            <a href="/security/">Security</a>
-          </li>
-          <li>
-            <a href="/culture/">Culture</a>
-          </li>
-        </ul>
+          {% if site.github.is_project_page %}
 
-      </header>
-      <section>
+            <p>Project maintained by <a href="{{ site.maintainer_url | default: site.github.owner_url }}">{{ site.maintainer_name | default: site.github.owner_name }}</a></p>
+            <p class="view"><a href="{{ site.github.repository_url }}">Contribute to the Project</a></p>
 
-        {{ content }}
+          {% endif %}
 
-      </section>
-      <footer>
+        </footer>
+      </aside>
+      <main class="site-body">
+        <section class="site-body-content">
 
-        {% if site.github.is_project_page %}
-          <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-          <p class="view"><a href="{{ site.github.repository_url }}">Contribute to the Project</a></p>
-        {% endif %}
+          {{ content }}
 
-      </footer>
-    </main
+        </section>
+      </main>
+    </section>
 
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
 

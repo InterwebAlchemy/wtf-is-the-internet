@@ -1,0 +1,118 @@
+---
+---
+
+@import '{{ site.theme }}';
+
+html {
+  box-sizing: border-box;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+body {
+  padding: 10px 20px;
+  margin: 0;
+  background: #f7f7f7;
+  color: #232323;
+}
+
+a {
+  transition: all 0.3s ease;
+}
+
+section {
+  float: none;
+}
+
+.wrapper {
+  float: none;
+  width: auto;
+  max-width: 1280px;
+  margin: 10px auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 25%;
+  height: 100%;
+
+  &-header {
+    position: relative;
+    float: none;
+    width: auto;
+
+    &-title {
+      margin-bottom: 5px;
+    }
+
+    &-subtitle {
+      margin-bottom: 40px;
+      color: #999;
+    }
+  }
+
+  &-footer {
+    float: none;
+    width: auto;
+  }
+}
+
+.topic-list {
+  list-style-type: none;
+  width: auto;
+  height: auto;
+  padding-left: 0;
+  margin-left: 0;
+  border: none;
+  background: transparent;
+
+  &-heading {
+    margin-bottom: 10px;
+  }
+
+  &-item {
+    float: none;
+    width: auto;
+    height: auto;
+    border: none;
+    margin-bottom: 5px;
+
+    &-link {
+      height: auto;
+      padding: 0;
+      text-align: left;
+      line-height: inherit;
+      color: #39c;
+
+      &:hover,
+      &:focus {
+        color: #069;
+      }
+    }
+  }
+}
+
+.site-body {
+  position: relative;
+  top: 10%;
+  left: 40%;
+}
+
+
+
+.ada-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+}
